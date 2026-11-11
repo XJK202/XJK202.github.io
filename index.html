@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="许靖楷｜AI 产品经理校招作品集。腾讯 TEG AI 平台部实习：游戏 AI 回复评测、错误归因、标签规范与评测工具反馈；个人延展作品 GameAI-QA MiniBench。">
+  <meta name="theme-color" content="#08111f">
+  <meta property="og:title" content="许靖楷｜AI 产品经理作品集">
+  <meta property="og:description" content="从玩家问题出发，把 AI 回复错误转化为评测标准与产品改进建议。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://xjk202.github.io/">
+  <title>许靖楷｜AI 产品经理作品集</title>
+  <link rel="canonical" href="https://xjk202.github.io/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2308111f'/%3E%3Cpath d='M17 18l15 28 15-28h-9l-6 13-6-13z' fill='%236ee7d8'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data/dataset-data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header" aria-label="页面导航">
+    <div class="nav-shell">
+      <a class="brand" href="#overview" aria-label="返回顶部">
+        <span class="brand-mark">XJ</span>
+        <span class="brand-copy"><strong>许靖楷</strong><small>AI Product Portfolio</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">展开导航</span>
+      </button>
+      <nav id="site-nav" class="site-nav">
+        <a class="active" href="#overview" aria-current="location">关于我</a>
+        <a href="#project">实习项目</a>
+        <a href="#method">产品思考</a>
+        <a href="#benchmark">个人作品</a>
+        <a href="#contribution">职责与交付</a>
+        <a class="nav-contact" href="#contact">联系我</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="overview" class="hero section-shell">
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span></span> AI PRODUCT MANAGER · 校招作品集</div>
+          <h1>许靖楷<span class="hero-title-line">让 AI 的回答<br><em>更可靠。</em></span></h1>
+          <a class="hero-phone" href="tel:13948872188">139 4887 2188 <span>联系我 <span aria-hidden="true">↗</span></span></a>
+          <p class="hero-lead">腾讯深圳总部 TEG AI 平台部 · AI 产品经理实习生。近三个月，参与《王者万象棋》灵宝 AI 回复评测与质量治理。<br>从玩家问题出发，把“这条回复为什么错”转化为评测标准、标签规则与产品改进建议。</p>
+          <div class="hero-tags" aria-label="经历关键词">
+            <span>游戏 AI 质量评测</span>
+            <span>错误归因与数据整理</span>
+            <span>标签规范与产品反馈</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#project">查看实习项目 <span aria-hidden="true">↘</span></a>
+            <a class="button button-secondary" href="#benchmark">体验个人作品 <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="hero-disclaimer">求职方向：AI 产品经理 · AI 应用、模型评测与数据策略</p>
+        </div>
+
+        <aside class="profile-stack reveal" aria-label="个人信息">
+          <article class="profile-card">
+            <div class="profile-topline"><span class="status-dot"></span> 校园招聘 · AI 产品方向</div>
+            <div class="portrait-wrap">
+              <img src="assets/profile-avatar.svg" alt="AI 产品主题插画" width="480" height="390">
+              <span class="portrait-badge">AI PM</span>
+            </div>
+            <div class="profile-copy">
+              <p class="profile-kicker">从用户问题，到评测标准</p>
+              <h2>用证据理解 AI 体验</h2>
+              <p>下钻单条对话，识别意图、盘面与规则之间的偏差；向上整理标签边界与产品改进建议。</p>
+            </div>
+            <div class="profile-contact">
+              <a href="tel:13948872188"><span>联系许靖楷</span><strong>139 4887 2188</strong></a>
+              <button id="copy-phone" type="button" data-copy="13948872188" aria-label="复制许靖楷的手机号">复制</button>
+            </div>
+          </article>
+          <article class="mini-dashboard" aria-label="参与的标签抽样评测">
+            <div class="mini-head"><span>标签抽样评测</span><small>实习 · 阶段性结果</small></div>
+            <div class="dashboard-main">
+              <div class="score-ring" aria-label="标签加权准确率约 90%"><strong>≈90<span>%</span></strong><small>标签加权准确率</small></div>
+              <div class="sample-summary"><strong>约 5,000 条</strong><span>参与评测的抽样规模</span><small>分层抽样 + 随机抽样</small></div>
+            </div>
+          </article>
+        </aside>
+      </div>
+
+      <div class="metric-strip reveal" aria-label="实习工作概览">
+        <div><strong>1000<sup>+</sup></strong><span>个人累计评测与归因</span></div>
+        <div><strong>70<sup>+</sup></strong><span>个人日均评测条数</span></div>
+        <div><strong>31<sup>个</sup></strong><span>参与定义与边界梳理的标签</span></div>
+        <div><strong>5–7<sup>版</sup></strong><span>参与标注 / 评测提示词迭代</span></div>
+        <div><strong>8<sup>+</sup></strong><span>沉淀评测维度的错误场景</span></div>
+      </div>
+    </section>
+
+    <section id="project" class="section section-light">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <div><span class="section-index">01</span><p class="eyebrow dark">INTERNSHIP · 实习项目</p></div>
+          <div>
+            <h2>《王者万象棋》灵宝 AI<br>回复评测与质量治理</h2>
+            <p>围绕负面情绪回应、盘面与阵容错误两类专题，我在同一个实习项目中参与三条工作线：发现具体错误、对齐判定标准、反馈评测工具问题。</p>
+          </div>
+        </div>
+
+        <div class="brief-grid" aria-label="实习项目的三条工作线">
+          <article class="brief-card reveal">
+            <span class="card-label">案例 01 · 回复评测与归因</span>
+            <h3>回答流畅，建议却无法执行</h3>
+            <p class="project-role">我的角色：人工评测、错误归因与正例整理</p>
+            <dl class="project-case-notes">
+              <div><dt>问题</dt><dd>同名英雄推荐错阵营、流派不匹配，或人口已满仍建议直接上场；只看回复文本，很容易漏掉这些错误。</dd></div>
+              <div><dt>关键动作</dt><dd>结合玩家 query 与当前盘面核对意图、实体和操作约束，逐条记录错误类型、判定依据与正确 case。</dd></div>
+              <div><dt>形成的交付</dt><dd>沉淀禁用阵营、阵容推荐、战力分析、上下场、装备及英雄知识等 8 类以上场景的评测维度；将正例与归因提交 mentor，支持算法侧数据回流。</dd></div>
+            </dl>
+          </article>
+          <article class="brief-card accent-card reveal">
+            <span class="card-label">案例 02 · 标签与评测规范</span>
+            <h3>同一句话，为什么会分到不同标签？</h3>
+            <p class="project-role">我的角色：参与标签定义与提示词迭代</p>
+            <dl class="project-case-notes">
+              <div><dt>问题</dt><dd>相近意图的边界不清，“看不懂用户”与“现有标签装不下需求”也容易被混为一谈。</dd></div>
+              <div><dt>关键动作</dt><dd>参与 31 个对话标签的定义梳理与互斥规则讨论；区分意图模糊、意图明确但未覆盖两类兜底场景。</dd></div>
+              <div><dt>形成的交付</dt><dd>参与迭代 5–7 版标注与评测提示词，将讨论中的判定边界写入规范，为标注和复核提供更一致的依据。</dd></div>
+            </dl>
+          </article>
+          <article class="brief-card reveal">
+            <span class="card-label">案例 03 · 抽样评测与看板反馈</span>
+            <h3>判不准，也可能是信息没展示全</h3>
+            <p class="project-role">我的角色：参与抽样评测，提出执行端反馈</p>
+            <dl class="project-case-notes">
+              <div><dt>问题</dt><dd>仅看当前轮，难以还原指代与真实需求；前端看板无法查看多轮对话，限制了评测判断。</dd></div>
+              <div><dt>关键动作</dt><dd>参与分层与随机抽样评测，按标签大盘占比加权计算准确率；将看板缺少历史信息的问题反馈给团队。</dd></div>
+              <div><dt>形成的交付</dt><dd>约 5000 条标签抽样的阶段性加权准确率约 90%；推动看板增加前五回合记录，补充多轮判定所需的信息。</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <div class="workflow-block reveal">
+          <div class="workflow-title">
+            <div><span class="card-label">工作方式</span><h3>把错误解释清楚，才有改进的起点</h3></div>
+            <p>我负责评测、归因与规范反馈；将正确 case 和结论提交 mentor，支持后续算法迭代。</p>
+          </div>
+          <ol class="workflow" aria-label="实习评测工作流程">
+            <li><span>01</span><strong>获取样本</strong><small>专项批次 / 标签抽样</small></li>
+            <li><span>02</span><strong>核对事实</strong><small>问题 + 历史 + 盘面</small></li>
+            <li><span>03</span><strong>判定错误</strong><small>意图 / 实体 / 约束</small></li>
+            <li><span>04</span><strong>整理正例</strong><small>正确回答 + 归因</small></li>
+            <li><span>05</span><strong>共建规范</strong><small>标签 / 互斥 / 提示词</small></li>
+            <li><span>06</span><strong>提交反馈</strong><small>支持算法侧数据回流</small></li>
+          </ol>
+        </div>
+
+        <div class="impact-grid">
+          <article class="impact-card reveal"><span>回复评测</span><strong>≈300</strong><small>条前端 query / 批次</small><p>个人日均评测并归因 70+ 条，累计超过 1000 条。</p></article>
+          <article class="impact-card reveal"><span>重点错误场景</span><strong>≈20%</strong><small>战力分析类占比</small><p>关注单方分析与双方比较的意图边界，结合盘面核对回复依据。</p></article>
+          <article class="impact-card reveal"><span>参与标签准确率评测</span><strong>≈5,000</strong><small>条分层与随机抽样样本</small><p>按各标签业务占比加权，阶段性整体标签准确率约 90%。</p></article>
+          <article class="impact-card reveal"><span>评测看板反馈</span><strong>5</strong><small>回合历史对话展示</small><p>从执行端提出问题，推动补充前五回合记录，为多轮判定提供依据。</p></article>
+        </div>
+        <p class="evidence-note reveal">1000+ 为个人回复评测与归因量；约 5000 为参与的标签抽样规模。约 90% 衡量标签判定准确率，不等同于 AI 回复质量或线上提升幅度。</p>
+      </div>
+    </section>
+
+    <section id="method" class="section section-ink">
+      <div class="section-shell">
+        <div class="section-heading inverse reveal">
+          <div><span class="section-index">02</span><p class="eyebrow">PRODUCT THINKING</p></div>
+          <div>
+            <h2>不止判断对错，<br>更要找到可复用的规则</h2>
+            <p>从实习中的标签讨论和评测反馈出发，我把思考整理为三个切入点：任务是什么、信息够不够、工具是否支持判断。</p>
+          </div>
+        </div>
+
+        <article class="decision-feature reveal">
+          <div class="decision-copy">
+            <span class="card-label light">方法思考 01 · 标签边界</span>
+            <h3>不是“提到了谁”，<br>而是“要做什么判断”</h3>
+            <p>同样提到对手，可能是在问对手本身的强度，也可能要求预判胜负。不能只凭“我 / 对手”分标签，要先还原问题与上下文中的真实任务。</p>
+            <ul class="decision-rules">
+              <li><span>单方</span>评价一个对象的状态；没有比较需求时，不额外补出胜负问题。</li>
+              <li><span>双方</span>询问能否取胜或相对威胁，需要结合双方信息进行比较。</li>
+            </ul>
+          </div>
+          <div class="taxonomy-shift" role="img" aria-label="意图判断示意：对手自身强度对应单方分析，能否战胜对手对应双方比较">
+            <div class="taxonomy-before">
+              <small>INPUT · 示例问题</small>
+              <div><span>Q1</span><strong>对手自身强度怎样？</strong></div>
+              <div><span>Q2</span><strong>这一轮我能赢吗？</strong></div>
+            </div>
+            <div class="shift-arrow"><span aria-hidden="true">→</span><small>识别任务</small></div>
+            <div class="taxonomy-after">
+              <small>INTENT · 判断对象</small>
+              <div><span>01</span><strong>单方状态分析</strong></div>
+              <div><span>02</span><strong>双方胜负比较</strong></div>
+            </div>
+          </div>
+        </article>
+
+        <div class="decision-grid">
+          <article class="decision-card reveal">
+            <span class="card-label light">实习参与 02 · 兜底设计</span>
+            <h3>“没有标签”不等于“没看懂”</h3>
+            <p>参与“其他”标签设计，区分意图模糊与意图明确但未覆盖两类情况。“其他”标签占比约 1%–2%。这让我意识到：标签覆盖不足与用户表达不清，需要不同的产品处理方式。</p>
+            <div class="split-box"><div><strong>明确但未覆盖</strong><span>先记录清楚的需求<br>后续可聚合分析，评估补标签</span></div><div><strong>意图模糊</strong><span>先识别缺少的对象或目标<br>产品上应优先澄清，而非猜测</span></div></div>
+          </article>
+          <article class="decision-card reveal">
+            <span class="card-label light">实习参与 03 · 看板反馈</span>
+            <h3>有些“判不准”，是因为没看到上一轮</h3>
+            <p>发现前端看板无法查看多轮对话后，我从评测执行视角反馈问题，推动增加前五回合记录，让代词指代和质疑对象有据可查。</p>
+            <div class="conversation-mini" aria-label="多轮信息对判定的作用示意"><span class="conversation-label">示例 · 前文</span><p>“刚拿到一个守卫，但人口已经满了。”</p><span class="conversation-label">当前轮</span><p class="current-turn">“那他能上吗？” <strong>先核对人口约束</strong></p></div>
+          </article>
+        </div>
+
+        <div class="case-lab reveal">
+          <div class="case-lab-head">
+            <div><span class="card-label light">CASE LAB · 典型问题示意</span><h3>一条 case，如何变成一条可复用规则？</h3></div>
+            <div class="case-tabs" role="tablist" aria-label="切换案例">
+              <button id="case-tab-entity" class="active" type="button" role="tab" aria-selected="true" aria-controls="case-panel" data-case="entity">阵营与流派</button>
+              <button id="case-tab-board" type="button" role="tab" aria-selected="false" aria-controls="case-panel" tabindex="-1" data-case="board">盘面约束</button>
+              <button id="case-tab-strength" type="button" role="tab" aria-selected="false" aria-controls="case-panel" tabindex="-1" data-case="strength">战力边界</button>
+              <button id="case-tab-emotion" type="button" role="tab" aria-selected="false" aria-controls="case-panel" tabindex="-1" data-case="emotion">事实与情绪</button>
+              <button id="case-tab-fallback" type="button" role="tab" aria-selected="false" aria-controls="case-panel" tabindex="-1" data-case="fallback">明确兜底</button>
+            </div>
+          </div>
+          <div id="case-panel" class="case-stage" role="tabpanel" aria-labelledby="case-tab-entity" tabindex="0">
+            <div class="case-query"><small>示例问题</small><blockquote id="case-query">“继续围绕现在的核心补强，别换流派。”</blockquote><div id="case-context" class="case-context">示例设定：当前为甲阵营·守卫流派；同名核心还有乙阵营·突袭流派版本，本局乙阵营不可用。</div></div>
+            <div class="case-reasoning">
+              <div><small>容易出现的问题</small><strong id="case-wrong">推荐另一阵营的同名核心</strong><p id="case-wrong-reason">只匹配英雄名，忽略阵营、流派与禁用约束。</p></div>
+              <span class="reason-arrow" aria-hidden="true">→</span>
+              <div class="correct"><small>参考判断</small><strong id="case-right">先确认完整实体与可用范围</strong><p id="case-right-reason">沿用玩家选定的阵营与流派，再依据现有棋子讨论补强。</p></div>
+            </div>
+            <div class="case-rule"><small>沉淀规则</small><p id="case-rule">推荐前同时核对英雄名、阵营、流派与局面约束；同名不代表可互换。</p></div>
+          </div>
+        </div>
+
+        <div class="metric-evidence reveal">
+          <div class="metric-evidence-copy">
+            <span class="card-label">方法思考 · 治理优先级</span>
+            <h3>准确率之外，<br>先修什么也很重要</h3>
+            <p>大盘指标看整体表现，分层样本看局部问题。我的判断是：先识别对玩家决策的影响，再结合出现频次和复发情况决定优先级。</p>
+            <small>标签加权准确率 = 各标签业务占比 × 对应抽样准确率，再求和。</small>
+          </div>
+          <ol class="priority-list" aria-label="问题治理的判断顺序">
+            <li><span>01</span><div><strong>影响执行，先核对约束</strong><p>人口已满、阵营不匹配等问题，会直接让建议失效。</p></div></li>
+            <li><span>02</span><div><strong>反复混淆，先澄清定义</strong><p>相似问题分到不同标签时，用对照案例讨论边界。</p></div></li>
+            <li><span>03</span><div><strong>证据不足，先补信息</strong><p>补齐上下文或抽样，避免把信息缺失直接算成模型错误。</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="benchmark" class="section section-paper">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <div><span class="section-index">03</span><p class="eyebrow dark">PERSONAL PROJECT · 个人作品</p></div>
+          <div>
+            <h2>GameAI-QA MiniBench</h2>
+            <p>把评测经验做成可体验的小工具：围绕游戏 AI 的意图边界与回复错误，制作示例集、参考评分和案例浏览器。这是实习之外的个人延展作品。</p>
+          </div>
+        </div>
+
+        <div class="benchmark-hero reveal">
+          <div class="benchmark-copy">
+            <div class="benchmark-badge">个人评测原型 · v1.0</div>
+            <h3>不止留下一个结论，<br>还留下判断的理由</h3>
+            <p>把 32 条原创案例组织成 16 组对照。改变一句问法、一项盘面或一条回复，展示判定为什么变化；先完成三步评测，再对照证据、评分与参考改写。</p>
+            <div class="benchmark-stats">
+              <div><strong>32</strong><span>原创案例</span></div>
+              <div><strong>16</strong><span>成对对照</span></div>
+              <div><strong>8</strong><span>问题切片</span></div>
+              <div><strong>7</strong><span>评分维度</span></div>
+            </div>
+            <div class="benchmark-scope" aria-label="数据集任务范围">
+              <span>场景分类</span><span>信息充分性</span><span>回复质量</span>
+            </div>
+            <div class="benchmark-actions">
+              <a class="button button-dark" href="dataset.html#try-it">体验三步评测 <span aria-hidden="true">↗</span></a>
+              <a class="button button-outline-dark" href="data/XuJingkai_GameAI-QA_MiniBench_v1.0.xlsx" download>下载 Excel <span aria-hidden="true">↓</span></a>
+              <a class="button button-outline-dark" href="dataset.html#explore">浏览全部案例</a>
+            </div>
+            <p class="project-note">案例与评分为方法演示，不是模型实测成绩。采用抽象棋局设定，不对应游戏正式规则。</p>
+          </div>
+          <div class="dataset-window" aria-label="个人评测数据集样例">
+            <div class="window-bar"><span aria-hidden="true"><i></i><i></i><i></i></span><small>GameAI-QA · 案例预览</small><em>v1.0</em></div>
+            <div class="dataset-tabs" role="tablist" aria-label="切换数据样例">
+              <button id="sample-tab-0" class="active" type="button" role="tab" aria-selected="true" aria-controls="dataset-sample" data-sample="0">比较意图</button>
+              <button id="sample-tab-1" type="button" role="tab" aria-selected="false" aria-controls="dataset-sample" tabindex="-1" data-sample="1">情绪边界</button>
+              <button id="sample-tab-2" type="button" role="tab" aria-selected="false" aria-controls="dataset-sample" tabindex="-1" data-sample="2">盘面约束</button>
+            </div>
+            <pre id="dataset-sample" role="tabpanel" aria-labelledby="sample-tab-0" tabindex="0"><code>案例编号    strength-001
+问题切片    单方与双方
+示例问题    三号位已经成型，我这一轮还能赢吗？
+候选回复    三号位有 3 个二星单位，核心装备齐全，目前成型度较高。
+参考标签    战力分析双方
+判定依据    只评价对手，没有完成双方风险比较。
+参考结论    需修复</code></pre>
+            <div class="window-foot"><span><i aria-hidden="true"></i> 示例输入 → 参考判断 → 改进方向</span></div>
+          </div>
+        </div>
+
+        <div class="benchmark-grid" aria-label="个人作品制作过程">
+          <article class="benchmark-card reveal"><span>01 · 定义问题</span><h3>先设计边界，再增加数量</h3><p>围绕 8 类问题设计 16 组对照，比较问法、信息或回复变化后的判定差异。每条补齐规则与事实依据，不依赖真实游戏的隐含知识。</p></article>
+          <article class="benchmark-card reveal"><span>02 · 设计评测</span><h3>让分数有对应的依据</h3><p>围绕事实、意图、上下文、可执行性、情绪、能力边界与表达设置七维参考评分。不适用的维度不计分，关键错误不能被总分掩盖。</p></article>
+          <article class="benchmark-card reveal"><span>03 · 完成原型</span><h3>让别人能看懂，也能使用</h3><p>通过 AI 辅助编程实现三步作答、参考反馈、成对比较与组合筛选。Excel 将评测输入和参考判定分开，CSV 支持导出完整或筛选后的案例。</p></article>
+        </div>
+
+        <div class="schema-line reveal" aria-label="作品使用路径">
+          <span>01 阅读输入</span><span>02 完成判断</span><span>03 查看依据</span><span>04 对照变化</span><span>05 下载材料</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contribution" class="section section-light contribution-section">
+      <div class="section-shell">
+        <div class="section-heading reveal">
+          <div><span class="section-index">04</span><p class="eyebrow dark">OWNERSHIP</p></div>
+          <div><h2>我的职责与交付</h2><p>在业务里做好评测与协作，在个人作品里把方法做成原型。两段经历对应不同的职责，也形成了相互补充的能力。</p></div>
+        </div>
+
+        <div class="ownership-grid">
+          <article class="ownership-card done reveal">
+            <div class="ownership-icon" aria-hidden="true">01</div><span class="card-label">实习贡献 · 参与团队协作</span>
+            <h3>评测、归因与规范共建</h3>
+            <ul>
+              <li>完成个人回复评测、归因与正确 case 整理</li>
+              <li>参与 31 个标签定义与互斥边界讨论</li>
+              <li>参与 5–7 版标注 / 评测提示词迭代</li>
+              <li>参与“其他”与意图模糊的兜底设计</li>
+              <li>参与抽样评测，提出多轮看板改进反馈</li>
+            </ul>
+          </article>
+          <article class="ownership-card extended reveal">
+            <div class="ownership-icon" aria-hidden="true">02</div><span class="card-label">个人作品 · 方案与原型</span>
+            <h3>MiniBench 与案例浏览器</h3>
+            <ul>
+              <li>围绕典型问题组织数据结构与案例切片</li>
+              <li>以 32 条示例呈现标签边界与参考判断</li>
+              <li>设计七维评分框架与错误归因路径</li>
+              <li>借助 AI 编程辅助实现网页与筛选交互</li>
+              <li>提供案例浏览页面与 Excel 文件</li>
+            </ul>
+          </article>
+          <article class="ownership-card next reveal">
+            <div class="ownership-icon" aria-hidden="true">03</div><span class="card-label">产品取舍 · 下一步设计</span>
+            <h3>先验证一致性，再扩大规模</h3>
+            <p>如果继续迭代，我会先邀请独立标注者用同一套规则复评，整理分歧集中在哪些边界，再决定补案例还是改定义，而不是先追求数据量。</p>
+            <p>待判定标准稳定后，再固定同一批样本比较不同版本。标签判对、回复可用和玩家满意是不同目标，需要分别观察。</p>
+          </article>
+        </div>
+
+        <div class="reflection-grid">
+          <article class="reflection-card reveal"><span>01 · 问题定义</span><h3>先对齐“什么叫对”</h3><p>如果同一个问题在不同人手里得到不同结论，应先讨论定义和证据，再决定是否增加数据。</p></article>
+          <article class="reflection-card reveal"><span>02 · 指标意识</span><h3>平均分不等于全部体验</h3><p>加权指标反映整体表现，切片结果解释局部问题；低频但会误导决策的错误也值得优先关注。</p></article>
+          <article class="reflection-card reveal"><span>03 · 产品视角</span><h3>评测工具也是产品</h3><p>能否看见上下文、能否理解判定依据，都会影响评测质量。执行中的不便，也可以成为产品改进的起点。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="section-shell contact-shell reveal">
+        <div>
+          <p class="eyebrow">LET'S BUILD RELIABLE AI PRODUCTS</p>
+          <h2>期待和你聊聊<br>AI 产品的“最后一公里”</h2>
+        </div>
+        <div class="contact-panel">
+          <p>如果你关注 AI 产品评测、后训练数据、智能体质量或游戏 AI，我很乐意分享更完整的方法与思考。</p>
+          <a class="contact-phone" href="tel:13948872188"><small>PHONE</small><strong>139 4887 2188</strong><span>↗</span></a>
+          <div class="contact-meta"><span>许靖楷</span><span>AI 产品经理 · 校园招聘</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="section-shell footer-shell">
+      <span>© <span id="year">2026</span> 许靖楷 · AI Product Portfolio</span>
+      <span>从一个错误，到一条可复用的规则。</span>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">已复制</div>
+</body>
+</html>
